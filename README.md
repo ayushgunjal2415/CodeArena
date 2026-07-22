@@ -1,11 +1,19 @@
 # CodeArena
 
-![Java](https://img.shields.io/badge/Java-17-orange?style=flat-square&logo=openjdk)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-6DB33F?style=flat-square&logo=springboot)
-![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=flat-square&logo=mysql)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis)
-![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
+<p align="center">
+
+<img src="https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk"/>
+<img src="https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=springboot"/>
+<img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react"/>
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql"/>
+<img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis"/>
+<img src="https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=springsecurity"/>
+<img src="https://img.shields.io/badge/JWT-Authentication-black?style=for-the-badge&logo=jsonwebtokens"/>
+<img src="https://img.shields.io/badge/WebSocket-Real_Time-blue?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Spring_AI-Groq-purple?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Maven-Build-red?style=for-the-badge&logo=apachemaven"/>
+
+</p>
 
 CodeArena is a full-stack coding platform developed to provide an interactive environment for coding practice, programming contests, MCQ assessments, and real-time coding battles. The platform integrates AI-assisted code review, secure authentication, live collaboration, and performance analytics to create a modern competitive programming experience.
 
@@ -119,38 +127,48 @@ The project aims to simplify coding practice while providing an engaging and com
 
 # Technology Stack
 
-| Category | Technologies |
-|----------|--------------|
-| Backend | Java 17, Spring Boot, Spring Security, Spring Data JPA, Hibernate |
-| Frontend | React, Vite, JavaScript, HTML5, CSS3 |
-| Database | MySQL |
-| Cache | Redis |
-| Authentication | JWT |
-| AI Integration | Spring AI, Groq API |
-| Build Tool | Maven |
-| Communication | REST API, WebSocket |
+| Layer          | Technologies                                           |
+| -------------- | ------------------------------------------------------ |
+| Frontend       | React 19, Vite, JavaScript, HTML5, CSS3                |
+| Backend        | Java 17, Spring Boot, Spring Security, Spring Data JPA |
+| Database       | MySQL                                                  |
+| Cache          | Redis                                                  |
+| Authentication | JWT, Spring Security                                   |
+| AI Integration | Spring AI, Groq API                                    |
+| Communication  | REST API, WebSocket                                    |
+| Build Tool     | Maven                                                  |
+
 
 ---
 
 # System Architecture
 
 ```
-                 +----------------------+
-                 |     React Client     |
-                 +----------+-----------+
-                            |
-                    REST API / WebSocket
-                            |
-                 +----------v-----------+
-                 |   Spring Boot API    |
-                 +----------+-----------+
-                            |
-        +-------------------+-------------------+
-        |                   |                   |
-        |                   |                   |
-   MySQL Database       Redis Cache       AI Service
-        |                                   |
-        |                               Groq API
+                           +----------------------+
+                           |    React Frontend    |
+                           |      (Vite)          |
+                           +----------+-----------+
+                                      |
+                          REST API / WebSocket
+                                      |
+                           +----------v-----------+
+                           |   Spring Boot API    |
+                           |  Spring Security     |
+                           |        JWT           |
+                           +----------+-----------+
+                                      |
+          +---------------------------+----------------------------+
+          |                           |                            |
+          |                           |                            |
++---------v--------+        +----------v---------+       +----------v---------+
+|     MySQL        |        |       Redis        |       |    Spring AI       |
+| User & Question  |        | OTP & Cache Store  |       |     Groq API       |
++------------------+        +--------------------+       +--------------------+
+                                      |
+                         +------------+------------+
+                         |                         |
+                Real-Time Coding Rooms      AI Code Review
+                   (WebSocket)           & Programming Help
 ```
 
 ---
@@ -299,16 +317,39 @@ VITE_SOCKET_URL
 
 # Screenshots
 
-Add screenshots of the following pages:
+### Home Page
 
-- Landing Page
-- Login
-- Dashboard
-- Coding Editor
-- Coding Room
-- MCQ Assessment
-- Leaderboard
-- AI Review
+> _Screenshot will be added here._
+
+---
+
+### Dashboard
+
+> _Screenshot will be added here._
+
+---
+
+### Coding Editor
+
+> _Screenshot will be added here._
+
+---
+
+### Coding Battle Room
+
+> _Screenshot will be added here._
+
+---
+
+### AI Code Review
+
+> _Screenshot will be added here._
+
+---
+
+### Leaderboard
+
+> _Screenshot will be added here._
 
 ---
 
